@@ -59,22 +59,36 @@ First, begin by cloning the project:
     $ git clone https://github.com/robotic-vision-lab/CropTrack-Tracking-with-Re-Identification.git
     $ cd CropTrack-Tracking-with-Re-Identification
 
+Next, create an environment and install the dependencies:
+
+    $ conda create --name croptrack python=3.10.
+    $ conda activate croptrack
+    $ pip install -r requirements.txt
 
 ### Dataset 
 
-Download the TexCot22/AgriSORT-Grapes dataset files.
-
+Download the TexCot22/AgriSORT-Grapes dataset files and place the public detections
+in their corresponding sequence folders.
 
 
 ### Usage 
 
 # Extract features
-    $ python ...
+
+The [PHA model](https://github.com/zhangguiwei610/PHA) is used for extracting appearance 
+features. For reproducibility, the detections used for all experiments are provided.
 
 
 # Tracking
 
-    $ python ...
+    $ python run_tracker.py \
+    --data_dir "D:\TexCot22\test" \
+    --dataset_type cotton \
+    --alpha [0.5, 0.9, 0.1] \
+    --track_thresh 0.6 \
+    --track_buffer 30 \
+    --match_thresh 0.875 \
+    --min-box-area 100
    
 ### CropTrack Source Code License
 

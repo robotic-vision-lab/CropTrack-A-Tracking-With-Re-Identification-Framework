@@ -1,0 +1,12 @@
+lap
+numpy
+pandas
+pycocotools
+opencv
+tqdm
+tensorpack
+scikit-image
+scikit-learn
+filterpy
+pysyaml
+motmetrics
