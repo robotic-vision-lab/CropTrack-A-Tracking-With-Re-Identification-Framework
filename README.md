@@ -79,7 +79,7 @@ The [PHA](https://github.com/zhangguiwei610/PHA) model is used for extracting
 the appearance features. For reproducibility, we provide the detections used
 for all the experiments.
 
-#### Tracking
+#### Object Tracking
 
 To run the tracker, execute the following command
 
