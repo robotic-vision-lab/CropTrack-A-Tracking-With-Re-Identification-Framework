@@ -1,6 +1,5 @@
 ## CropTrack: A Tracking with Re-Identification Framework for Precision Agriculture
 
-
 ### Overview
 
 Multi-object tracking (MOT) in agricultural environments presents major
@@ -9,77 +8,80 @@ illumination changes, and frequent occlusions. Contemporary trackers in this
 domain rely on the motion of objects rather than appearance for association.
 Nevertheless, they struggle to maintain object identities when targets undergo
 frequent and strong occlusions. The high similarity of object appearances makes
-integrating appearance-based association non-trivial for agricultural scenarios.
+integrating appearance-based association non-trivial for agricultural
+scenarios.
 
 <p align="center">
-  <img src="images/overview.PNG" alt="overview" width="400"/>
+  <img src="images/overview.png" alt="overview" width="400"/>
 </p>
 
-To solve this problem we propose CropTrack, a MOT framework based on a
-combination of appearance and motion information.
-This repository provides source code for our ... titled "[CropTrack: A Tracking with Re-Identification Framework for Precision Agriculture
-](...)." 
-CropTrack integrates a
-re-ranking–enhanced appearance association, a one-to-many association with
-appearance-based conflict resolution strategy, and an exponential moving average
-prototype feature bank to improve appearance-based association. Evaluated on
-publicly available agricultural MOT datasets, CropTrack demonstrates consistent
-identity preservation, outperforming traditional motion-based tracking methods.
+This repository provides source code for our paper titled "[CropTrack: A
+Tracking with Re-Identification Framework for Precision Agriculture ]()."
+CropTrack is a MOT framework based on a combination of appearance and motion
+information. Concretely, CropTrack integrates a reranking-enhanced appearance
+association, a one-to-many association with appearance-based conflict
+resolution strategy, and an exponential moving average prototype feature bank
+to improve appearance-based association. Evaluated on publicly available
+agricultural MOT datasets, CropTrack demonstrates consistent identity
+preservation, outperforming traditional motion-based tracking methods.
 Compared to the state of the art, CropTrack achieves significant gains in
 identification F1 and association accuracy scores with a lower number of
 identity switches. 
 
-More information on the project can be found on the 
-[CropTrack website](...).
+More information on the project can be found on the [CropTrack
+website](https://robotic-vision-lab.github.io/croptrack).
 
 ### Citation
 
-If you find this project useful, then please consider citing both our paper and
-dataset.
+If you find this project useful, then please consider citing our paper.
 
 ```bibitex
 @inproceedings{CropTrack,
-  title={CropTrack: A Tracking with Re-Identification Framework for Precision Agriculture
-},
-  author={Al Muzaddid, Md Ahmed, Jordan A. James, and Beksi, William J},
-  year={2026}
+  title={CropTrack: A Tracking with Re-Identification Framework for Precision Agriculture},
+  author={Al Muzaddid, Md Ahmed and James, Jordan A and Beksi, William J},
+  year={2025}
 }
 ```
 
 ### CropTrack Pipeline 
 
 <p align="center">
-  <img src="images/pipeline.PNG" alt="cropnerf_pipeline" width="800"/>
+  <img src="images/pipeline.png" alt="croptrack pipeline" width="800"/>
 </p>
 
 ### Installation 
 
-First, begin by cloning the project:
+First, begin by cloning the project
 
-    $ git clone https://github.com/robotic-vision-lab/CropTrack-Tracking-with-Re-Identification.git
-    $ cd CropTrack-Tracking-with-Re-Identification
+    $ git clone https://github.com/robotic-vision-lab/CropTrack-A-Tracking-With-Re-Identification-Framework
+    $ cd CropTrack-A-Tracking-With-Re-Identification-Framework
 
-Next, create an environment and install the dependencies:
+Next, create an environment and install the dependencies
 
     $ conda create --name croptrack python=3.10.
     $ conda activate croptrack
     $ pip install -r requirements.txt
 
-### Dataset 
+### Datasets 
 
-Download the TexCot22/AgriSORT-Grapes dataset files and place the public detections
-in their corresponding sequence folders.
-
+Download the
+[TexCot22](https://dataverse.tdl.org/dataset.xhtml?persistentId=doi:10.18738/T8/5M9NCI)
+and
+[AgriSORT-Grapes](https://drive.google.com/drive/folders/1sbsUwCtGQtA58cLVP5sd37tjjkMFCh05)
+dataset files and place the public detections in their corresponding sequence
+folders.
 
 ### Usage 
 
-# Extract features
+#### Feature Extraction 
 
-The [PHA model](https://github.com/zhangguiwei610/PHA) is used for extracting appearance 
-features. For reproducibility, the detections used for all experiments are provided.
+The [PHA](https://github.com/zhangguiwei610/PHA) model is used for extracting
+the appearance features. For reproducibility, we provide the detections used
+for all the experiments.
 
+#### Tracking
 
-# Tracking
+To run the tracker, execute the following command
 
     $ python run_tracker.py \
     --data_dir "D:\TexCot22\test" \
@@ -90,9 +92,6 @@ features. For reproducibility, the detections used for all experiments are provi
     --match_thresh 0.875 \
     --min-box-area 100
    
-### CropTrack Source Code License
+### License
 
-[![license](https://img.shields.io/badge/license-Apache%202-blue)](...)
-
-
-
+[![license](https://img.shields.io/badge/license-Apache%202-blue)](https://github.com/robotic-vision-lab/CropTrack-A-Tracking-With-Re-Identification-Framework/blob/main/LICENSE)
