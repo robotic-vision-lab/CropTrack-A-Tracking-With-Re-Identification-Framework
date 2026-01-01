@@ -36,9 +36,10 @@ website](https://robotic-vision-lab.github.io/croptrack).
 If you find this project useful, then please consider citing our paper.
 
 ```bibitex
-@inproceedings{CropTrack,
-  title={CropTrack: A Tracking with Re-Identification Framework for Precision Agriculture},
+@article{muzaddid2025crop,
+  title={CropTrack: A tracking with re-identification framework for precision agriculture},
   author={Al Muzaddid, Md Ahmed and James, Jordan A and Beksi, William J},
+  journal={arXiv preprint arXiv:2512.24838},
   year={2025}
 }
 ```
