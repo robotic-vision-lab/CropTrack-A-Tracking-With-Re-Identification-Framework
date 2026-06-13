@@ -24,9 +24,9 @@ association with appearance-based conflict resolution strategy, and an
 exponential moving average prototype feature bank to improve appearance-based
 association. Evaluated on publicly available agricultural MOT datasets,
 CropTrack demonstrates consistent identity preservation, outperforming
-traditional motion-based tracking methods.  Compared to the state of the art,
-CropTrack achieves significant gains in identification F1 and association
-accuracy scores with a lower number of identity switches. 
+traditional motion-based tracking methods. Compared to the state of the art,
+CropTrack achieves significant gains in association accuracy and identification
+precision scores with a lower number of identity switches.
 
 More information on the project can be found on the [CropTrack
 website](https://robotic-vision-lab.github.io/croptrack).
